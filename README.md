@@ -123,6 +123,21 @@ function doSomething() {
 }
 ```
 
+### Switch Statements
+The 'case' keyword lines up vertically with the 'switch' keyword.  The code inside a case statement and the 'break' keyword line up vertically.
+
+```JavaScript
+switch (x) {
+case 9:
+    y = 15;
+    break;
+    
+case 10:
+    y = 25;
+    break;
+}
+```
+
 ### Function Bodies
 There must be no newlines in an innermost function body.  Newlines are permitted to separate variables and functions in an outer scope.
 
