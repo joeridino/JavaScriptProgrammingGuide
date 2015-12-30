@@ -87,7 +87,7 @@ var result = callFunctionWithWordyParams(
 ```
 
 ### Brackets
-Starting brackets don't have their own line.
+Starting brackets don't have their own line.  Curly braces must never be omitted from control structures with a single statement.
 
 ```JavaScript
 if (x === 5) {
@@ -108,6 +108,12 @@ var a = [
     4,
     5
 ];
+```
+
+```JavaScript
+// Illegal
+if (x)
+    console.log('x is truthy');
 ```
 
 ### Variable Declarations
@@ -140,6 +146,9 @@ default:
     y = 99;
 }
 ```
+
+### Triple Equals
+Always use the triple-equals operator (===) instead of the double-equals operator (==).
 
 ### Function Bodies
 There must be no newlines in an innermost function body.  Newlines are permitted to separate variables and functions in an outer scope.
