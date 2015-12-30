@@ -46,6 +46,14 @@ function doSomething () {
 }
 ```
 
+### Acronyms
+Acronyms must follow the camel case token style.
+
+```JavaScript
+// HTTP and URL become Http and Url
+var myHttpUrl = 'http://www.example.com';
+```
+
 ### Whitespace
 Code inside parens is tight.  Comma-separated items have a single space after each comma.
 
