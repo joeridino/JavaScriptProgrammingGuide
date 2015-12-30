@@ -127,11 +127,13 @@ There must be no newlines in an innermost function body.  Newlines are permitted
     var x = 5,
         y = 6;
     
+    // Legal function: small and clear
     function sum(a, b) {
         var sum = a + b;
         return sum;
     }
     
+    // Legal function: small and clear
     function multiply(obj) {
         var i,
             result = 1;
@@ -140,6 +142,26 @@ There must be no newlines in an innermost function body.  Newlines are permitted
                 result *= obj[i];
             }
         }
+        return result;
+    }
+    
+    // Illegal function: newlines denote function "parts".
+    // These parts should be split up into separate functions.
+    function functionCodeSmell(b, z) {
+        var result = false,
+            name = 'Bob',
+            x = 5;
+            
+        if (b) {
+            result = react();
+        } else {
+            result = sleep();
+        }
+        
+        if (z === 'UNKNOWN') {
+            barf();
+        }
+        
         return result;
     }
 }());
