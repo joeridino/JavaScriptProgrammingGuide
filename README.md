@@ -237,11 +237,11 @@ doAjax(ajaxSetup);
 Callbacks have two arguments, an instance of an Error object, and a data result.  The Error object can be an Error itself or any child class of Error.  If there is no error, it must be set to null.  The result argument can be any data type.  Make sure to bind to 'this' when passing the callback from the context of a class.
 
 ```JavaScript
+// Simple callback function
 function myCallback(err, result) {
 }
-```
 
-```JavaScript
+// Bind example
 function Person() {
 }
 
