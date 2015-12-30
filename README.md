@@ -47,11 +47,14 @@ function doSomething () {
 ```
 
 ### Acronyms
-Acronyms must follow the camel case token style.
+Acronyms must have lowercase letters starting at the second character.
 
 ```JavaScript
 // HTTP and URL become Http and Url
 var myHttpUrl = 'http://www.example.com';
+
+// Http becomes http here
+var httpUrl = 'http://www.example.com';
 ```
 
 ### Whitespace
