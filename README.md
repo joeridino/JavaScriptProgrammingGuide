@@ -10,7 +10,7 @@ All JavaScript files must pass a JSLint check.  Use JSLint comments at the top o
 ```
 
 ### General File Format
-Each file must be wrapped with a self-executing anonymous function.  The first line in the function should be 'use strict';.
+Each file must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.
 
 ```JavaScript
 (function () {
@@ -19,6 +19,9 @@ Each file must be wrapped with a self-executing anonymous function.  The first l
     // Your code here
 }());
 ```
+
+### Comments
+Source code must be commented using the [JSDoc](http://usejsdoc.org) syntax.
 
 ### Indents
 Indents are 4 space characters.
@@ -149,7 +152,7 @@ There must be no newlines in an innermost function body.  Newlines are permitted
     }
     
     // Illegal function: newlines denote function "parts".
-    // These parts should be split up into separate functions.
+    // These parts must be split up into separate functions.
     function functionCodeSmell(b, z) {
         var result = false,
             name = 'Bob',
