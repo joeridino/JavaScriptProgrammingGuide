@@ -200,6 +200,15 @@ There must be no newlines in an innermost function body.  Newlines are permitted
 }());
 ```
 
+### Function Arguments
+Functions may only take a maximum of 3 arguments.
+
+```JavaScript
+function sum(a, b, c) {
+    return a + b + c;
+}
+```
+
 ### "Classes"
 JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed unless the class has data properties only.  Private variables and functions must be prefixed with an underscore.
 
@@ -227,15 +236,6 @@ Person.prototype.setName = function (name) {
 Person.prototype._storeNameInDatabase = function () {
     // Database code here
 };
-```
-
-### Function Arguments
-Functions may only take a maximum of 3 arguments.
-
-```JavaScript
-function sum(a, b, c) {
-    return a + b + c;
-}
 ```
 
 ### Classless Objects as Arguments
