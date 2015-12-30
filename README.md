@@ -135,6 +135,9 @@ case 9:
 case 10:
     y = 25;
     break;
+    
+default:
+    y = 99;
 }
 ```
 
