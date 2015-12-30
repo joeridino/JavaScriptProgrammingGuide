@@ -1,5 +1,5 @@
 # JavaScript Programming Guide
-*A guide for creating consistent and pretty JavaScript programs*
+*A guide for creating consistent and pretty JavaScript programs.*
 
 ### JSLint
 All JavaScript files must pass a JSLint check.  Use JSLint comments at the top of files.
@@ -27,7 +27,9 @@ Indents are 4 space characters.
 User-defined tokens must be in camel case form.  Namespaces and function constructors must start with an upper case letter.  All other tokens must start with a lowercase letter.
 
 ```JavaScript
-J = {};
+var J = {};
+J.GraphicsSystem = function () {
+};
 ```
 
 ```JavaScript
@@ -222,4 +224,23 @@ var ajaxSetup = new AjaxSetup();
 ajaxSetup.setMethod('POST');
 ajaxSetup.setUrl('/ajax.php');
 doAjax(ajaxSetup);
+```
+### Callbacks
+Callbacks have two arguments, an instance of an Error object, and a data result.  The Error object can be an Error itself or any child class of Error.  If there is no error, it must be set to null.  The result argument can be any data type.  Make sure to bind to 'this' when passing the callback from the context of a class.
+
+```JavaScript
+function myCallback(err, result) {
+}
+```
+
+```JavaScript
+function Person() {
+}
+
+Person.prototype.myTimeoutCallback = function (err, result) {
+};
+
+Person.prototype.doSomething = function () {
+    setTimeout(this.myTimeoutCallback.bind(this), 2000);
+};
 ```
