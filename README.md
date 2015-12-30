@@ -24,7 +24,16 @@ Each file must be wrapped with a self-executing anonymous function.  The first l
 Indents are 4 space characters.
 
 ### Tokens
-User-defined tokens must be in camel case form.  The first character must be in lowercase.  Function constructors must start with an uppercase letter.
+User-defined tokens must be in camel case form.  Namespaces and function constructors must start with an upper case letter.  All other tokens must start with a lowercase letter.
+
+```JavaScript
+J = {};
+```
+
+```JavaScript
+function Person () {
+}
+```
 
 ```JavaScript
 var xCoordinate = 5;
@@ -35,9 +44,54 @@ function doSomething () {
 }
 ```
 
+### Whitespace
+Code inside parens is tight.  Comma-separated items have a single space after each comma.
+
 ```JavaScript
-function Person () {
+var s = sum(a, b, c);
+```
+
+```JavaScript
+var f = function () {
+};
+```
+
+```JavaScript
+if (x === 5) {
+    doSomethingForX();
 }
+```
+
+```JavaScript
+var result = callFunctionWithWordyParams(
+    J.SystemLocator.getGraphicsSystem().loadSoundGroup('global', myCallback),
+    variableForLine2,
+    variableForLine3
+);
+```
+
+### Brackets
+Starting brackets don't have their own line.
+
+```JavaScript
+if (x === 5) {
+    doSomethingForX();
+} else if (y === 6) {
+    doSomethingForY();
+} else {
+    doSomethingElse();
+}
+```
+
+```JavaScript
+var a = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+];
 ```
 
 ### Variable Declarations
