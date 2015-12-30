@@ -127,13 +127,13 @@ There must be no newlines in an innermost function body.  Newlines are permitted
     var x = 5,
         y = 6;
     
-    // Legal function: small and clear
+    // Legal function: small, no newlines
     function sum(a, b) {
         var sum = a + b;
         return sum;
     }
     
-    // Legal function: small and clear
+    // Legal function: small, no newlines
     function multiply(obj) {
         var i,
             result = 1;
