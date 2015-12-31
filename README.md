@@ -99,7 +99,7 @@ while (!done) {
 
 ```JavaScript
 var result = callFunctionWithWordyParams(
-    J.SystemLocator.getGraphicsSystem().loadSoundGroup('global', myCallback),
+    J.SystemLocator.getAudioSystem().loadSoundGroup('global', myCallback),
     variableForLine2,
     variableForLine3
 );
