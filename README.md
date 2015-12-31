@@ -153,6 +153,18 @@ default:
 ### Triple Equals
 Always use the triple-equals operator (===) instead of the double-equals operator (==).
 
+### Ternary Operator
+Use the ternary operator only to return values, not for performing operations.  Parens must wrap the ternary expression for clarity.
+
+```JavaScript
+// Legal
+var x = (y === 6 ? 7 : 8);
+var lastName = (firstName === 'Bob' ? 'Smith' : 'Doe');
+
+// Illegal
+(firstName === 'Bob' ? fullName.setLastName('Smith') : fullName.setLastName('Doe'));
+```
+
 ### Function Bodies
 There must be no newlines in an innermost function body.  Newlines are permitted to separate variables and functions in an outer scope.
 
