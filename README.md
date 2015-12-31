@@ -150,8 +150,8 @@ default:
 }
 ```
 
-### Triple Equals
-Always use the triple-equals operator (===) instead of the double-equals operator (==).
+### Strict Equality
+Always use the strict equality operators (===, !==) instead of the equality operators (==, !=).
 
 ### Ternary Operator
 Use the ternary operator only to return values, not for performing operations.  Parens must wrap the ternary expression for clarity.
