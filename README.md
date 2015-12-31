@@ -241,6 +241,9 @@ Person.prototype._storeNameInDatabase = function () {
 };
 ```
 
+### Class Constructor Side Effects
+Constructors must not cause side effects such as running Ajax requests, communicating with a Database, appending elements to the DOM, and the like.  Constructors are meant for initializing class properties only.
+
 ### Classless Objects as Arguments
 Try to avoid passing in arbitrary objects as function arguments.
 
