@@ -120,15 +120,15 @@ if (x)
 ```
 
 ### Variable Declarations
-All variables must be declared with a single var statement at the top of functions.  Variables at position 2 and greater must indented 4 spaces after the var keyword on subsequent lines.
+All variables must be declared with a single var statement at the top of functions in alphabetical order.  Variables at position 2 and greater must indented 4 spaces after the var keyword on subsequent lines.
 
 ```JavaScript
 function doSomething() {
-    var x = 5,
-        y = 6,
-        z,
+    var bar,
         foo = null,
-        bar;
+        x = 5,
+        y = 6,
+        z;
 }
 ```
 
