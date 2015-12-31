@@ -163,6 +163,7 @@ case 10:
     
 default:
     y = 99;
+    break;
 }
 ```
 
