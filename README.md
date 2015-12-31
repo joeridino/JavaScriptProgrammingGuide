@@ -140,7 +140,13 @@ Single quotes must be used for strings instead of double quotes.
 
 ```JavaScript
 var s = 'Hello, World!';
+```
+
+```JavaScript
 var s2 = 'My name is Bob O\'Ryan';
+```
+
+```JavaScript
 var html = '<div id="page1">Page1 goes here</div>';
 ```
 
