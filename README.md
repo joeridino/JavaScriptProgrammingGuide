@@ -1,4 +1,6 @@
-# JavaScript Programming Guide (version 1.0.0)
+# JavaScript Programming Guide
+v1.0.0
+
 *A guide for creating consistent and pretty JavaScript programs.*
 
 ### JSLint
