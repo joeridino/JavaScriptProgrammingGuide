@@ -67,10 +67,12 @@ Each JavaScript project may create at most one global variable.
 Code inside parens is tight.  Comma-separated items have a single space after each comma.
 
 ```JavaScript
+// No space allowed after the word 'sum' here
 var s = sum(a, b, c);
 ```
 
 ```JavaScript
+// A single space after the word 'function' here is required
 var f = function () {
 };
 ```
@@ -78,6 +80,18 @@ var f = function () {
 ```JavaScript
 if (x === 5) {
     doSomethingForX();
+}
+```
+
+```JavaScript
+for (i in obj) {
+    if (obj.hasOwnProperty(i)) {
+    }
+}
+```
+
+```JavaScript
+while (!done) {
 }
 ```
 
