@@ -165,8 +165,8 @@ There must be no newlines in an innermost function body.  Newlines are permitted
     
     // Legal function: small, no newlines
     function sum(a, b) {
-        var sum = a + b;
-        return sum;
+        var result = a + b;
+        return result;
     }
     
     // Legal function: small, no newlines
@@ -184,8 +184,8 @@ There must be no newlines in an innermost function body.  Newlines are permitted
     // Illegal function: newlines denote function "parts".
     // These parts must be split up into separate functions.
     function functionCodeSmell(b, z) {
-        var result = false,
-            name = 'Bob',
+        var name = 'Bob',
+            result = false,
             x = 5;
             
         if (b) {
