@@ -60,6 +60,9 @@ var myHttpUrl = 'http://www.example.com';
 var httpUrl = 'http://www.example.com';
 ```
 
+### Globals
+Each JavaScript project may create at most one global variable.
+
 ### Whitespace
 Code inside parens is tight.  Comma-separated items have a single space after each comma.
 
