@@ -197,6 +197,25 @@ var lastName = (firstName === 'Bob' ? 'Smith' : 'Doe');
 (firstName === 'Bob' ? fullName.setLastName('Smith') : fullName.setLastName('Doe'));
 ```
 
+### Multi-line Statements
+Never put more than one statement on a single line.
+
+```JavaScript
+// Illegal
+this.doSomething(); this.process();
+
+// Illegal
+var x = 5; var y = 7;
+```
+
+### Space Savers
+Don't sacrifice clarity to save space.
+
+```JavaScript
+// Illegal
+this.getX = function () { return this._x; };
+```
+
 ### Function Bodies
 There must be no newlines in an innermost function body.  Newlines are permitted to separate variables and functions in an outer scope.
 
