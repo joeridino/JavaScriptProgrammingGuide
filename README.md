@@ -212,8 +212,8 @@ function sum(a, b, c) {
 }
 ```
 
-### "Classes"
-JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed unless the class has data properties only.  Private variables and functions must be prefixed with an underscore.
+### Class Syntax
+JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed unless the class has data properties only.  Private variables and functions must be prefixed with an underscore.  Child classes may access private variables and functions of their ancestors.  There is no special protected prefix.
 
 ```JavaScript
 // The Circle class is a data-only class.
@@ -243,6 +243,39 @@ Person.prototype._storeNameInDatabase = function () {
 
 ### Class Constructor Side Effects
 Constructors must not cause side effects such as running Ajax requests, communicating with a Database, appending elements to the DOM, and the like.  Constructors are meant for initializing class properties only.
+
+### Class Function Layout
+Public functions must be at the top of the class, with private functions at the bottom.  Getters and setters are organized in pairs with the get function first followed by the set function.
+
+```JavaScript
+function Person(id) {
+    this._id = id;
+    this._name = null;
+    this._age = null;
+}
+
+Person.prototype.getName = function () {
+    return this._name;
+};
+
+Person.prototype.setName = function (name) {
+    this._name = name;
+};
+
+Person.prototype.getAge = function () {
+    return this._age;
+};
+
+Person.prototype.setAge = function (age) {
+    this._age = age;
+};
+
+Person.prototype._internalFunction = function () {
+};
+
+Person.prototype._specialFunction = function () {
+};
+```
 
 ### Classless Objects as Arguments
 Try to avoid passing in arbitrary objects as function arguments.
