@@ -135,6 +135,15 @@ if (x)
     console.log('x is truthy');
 ```
 
+### Quotes
+Single quotes must be used for strings instead of double quotes.
+
+```JavaScript
+var s = 'Hello, World!';
+var s2 = 'My name is Bob O\'Ryan';
+var html = '<div id="page1">Page1 goes here</div>';
+```
+
 ### Variable Declarations
 All variables must be declared with a single var statement at the top of functions in alphabetical order.  Variables at position 2 and greater must indented 4 spaces after the var keyword on subsequent lines.
 
