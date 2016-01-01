@@ -25,12 +25,8 @@ Source code must be commented using the [JSDoc](http://usejsdoc.org) syntax.  Fi
 
 ```JavaScript
 /**
- * @file J Game Engine
+ * J Game Engine.
  * @version 1.0.0
- */
- 
-/**
- * J Game Engine namespace.
  * @namespace
  * @global
  */
