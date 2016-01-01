@@ -12,7 +12,7 @@ All JavaScript files must pass a JSLint check.  Use JSLint comments at the top o
 ```
 
 ### General File Format
-Each file must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.
+Each file (besides a file with just a global variable) must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.
 
 ```JavaScript
 (function () {
@@ -20,6 +20,12 @@ Each file must be wrapped with a self-executing anonymous function.  The first l
     
     // Your code here
 }());
+```
+
+For your project global, it can simply be defined at the global level outside of an anonymous function:
+
+```JavaScript
+var MyProjectGlobal = {};
 ```
 
 ### Comments
@@ -33,6 +39,9 @@ User-defined tokens must be in camel case form.  Namespaces and function constru
 
 ```JavaScript
 var J = {};
+```
+
+```JavaScript
 J.GraphicsSystem = function () {
 };
 ```
@@ -217,7 +226,7 @@ this.getX = function () { return this._x; };
 ```
 
 ### Function Bodies
-There must be no newlines in an innermost function body.  Newlines are permitted to separate variables and functions in an outer scope.
+There must be no newlines in an innermost function body.  Newlines are required to separate variables and functions in an outer scope.
 
 ```JavaScript
 (function () {
