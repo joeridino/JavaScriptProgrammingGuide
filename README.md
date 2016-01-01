@@ -3,14 +3,6 @@ v1.0.0
 
 *A guide for creating consistent and pretty JavaScript programs.*
 
-### JSLint
-All JavaScript files must pass a JSLint check.  Use JSLint comments at the top of files.
-
-```JavaScript
-/*global J: false */
-/*jslint browser: true, devel: true, nomen: true */
-```
-
 ### General File Format
 Each file (besides a file with just a global variable) must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.
 
