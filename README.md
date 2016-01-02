@@ -398,7 +398,7 @@ Person.prototype._specialFunction = function () {
 ```
 
 ### Fluent Interfaces
-All setter functions must return 'this'.  Other functions that don't normally have a return value can optionally return 'this' if desired, when it makes most sense.
+All setter functions must return 'this'.  Other functions that don't normally have a return value can optionally return 'this', when it makes most sense.
 
 ```JavaScript
 Person.prototype.setAge = function (age) {
