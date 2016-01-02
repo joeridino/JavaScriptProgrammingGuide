@@ -67,9 +67,11 @@ Source code must be commented using the [JSDoc](http://usejsdoc.org) syntax.  Fi
      /**
       * Sets the person's name.
       * @param {string} name
+      * @return {Person}
       */
      Person.prototype.setName = function (name) {
          this._name = name;
+         return this;
      };
 }());
 ```
@@ -349,6 +351,7 @@ function Person () {
 Person.prototype.setName = function (name) {
     this._name = name;
     this._storeNameInDatabase();
+    return this;
 };
 
 Person.prototype._storeNameInDatabase = function () {
@@ -375,6 +378,7 @@ Person.prototype.getName = function () {
 
 Person.prototype.setName = function (name) {
     this._name = name;
+    return this;
 };
 
 Person.prototype.getAge = function () {
@@ -383,6 +387,7 @@ Person.prototype.getAge = function () {
 
 Person.prototype.setAge = function (age) {
     this._age = age;
+    return this;
 };
 
 Person.prototype._internalFunction = function () {
@@ -390,6 +395,29 @@ Person.prototype._internalFunction = function () {
 
 Person.prototype._specialFunction = function () {
 };
+```
+
+### Fluent Interfaces
+All class functions must return 'this' when there is otherwise no return value.
+
+```JavaScript
+Person.prototype.setAge = function (age) {
+    this._age = age;
+    return this;
+};
+
+...
+
+Person.prototype.setName = function (name) {
+    this._name = name;
+    return this;
+}
+
+...
+
+var p = new Person()
+    .setAge(35)
+    .setName('Bob Smith');
 ```
 
 ### Classless Objects as Arguments
@@ -423,6 +451,7 @@ function AjaxSetup () {
 
 AjaxSetup.prototype.setMethod = function (method) {
     this._method = method;
+    return this;
 };
 
 AjaxSetup.prototype.getMethod = function () {
@@ -431,6 +460,7 @@ AjaxSetup.prototype.getMethod = function () {
 
 AjaxSetup.prototype.setUrl = function (url) {
     this._url = url;
+    return this;
 };
 
 AjaxSetup.prototype.getUrl = function () {
