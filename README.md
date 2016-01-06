@@ -80,27 +80,37 @@ Source code must be commented using the [JSDoc](http://usejsdoc.org) syntax.  Fi
 Indents are 4 space characters.
 
 ### Tokens
-User-defined tokens must be in camel case form.  Namespaces and function constructors must start with an upper case letter.  All other tokens must start with a lowercase letter.
+User-defined tokens must be in camel case form.  Namespaces and function constructors must start with an uppercase letter.  Constants are all upper case, with underscores separating words.  All other tokens must start with a lowercase letter.
 
 ```JavaScript
+// Namespace
 var J = {};
 ```
 
 ```JavaScript
+// Function Constructor
 J.GraphicsSystem = function () {
 };
 ```
 
 ```JavaScript
+// Function Constructor
 function Person () {
 }
 ```
 
 ```JavaScript
+// Variable
 var xCoordinate = 5;
 ```
 
 ```JavaScript
+// Constant
+var MY_CONSTANT = 42;
+```
+
+```JavaScript
+// Regular Function
 function doSomething () {
 }
 ```
