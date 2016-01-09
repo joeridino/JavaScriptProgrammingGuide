@@ -477,9 +477,9 @@ AjaxSetup.prototype.getUrl = function () {
     return this._url;
 };
 
-var ajaxSetup = new AjaxSetup();
-ajaxSetup.setMethod('POST');
-ajaxSetup.setUrl('/ajax.php');
+var ajaxSetup = new AjaxSetup()
+    .setMethod('POST')
+    .setUrl('/ajax.php');
 doAjax(ajaxSetup);
 ```
 ### Callbacks
