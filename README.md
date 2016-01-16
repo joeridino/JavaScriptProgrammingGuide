@@ -4,7 +4,7 @@ v1.0.0
 *A guide for creating consistent and pretty JavaScript programs.*
 
 ### General File Format
-Each file (besides a file with just a global variable) must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.
+Each file (besides a file with just a global variable) must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.  Note: this does not apply to Node JS files.
 
 ```JavaScript
 (function () {
