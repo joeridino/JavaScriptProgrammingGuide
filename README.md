@@ -20,62 +20,6 @@ For your project global, it can simply be defined at the global level outside of
 var MyProjectGlobal = {};
 ```
 
-### Comments
-Source code must be commented using the [JSDoc](http://usejsdoc.org) syntax.  File-level comment blocks are optional and must be omitted if they provide redundant information from a class comment block.  Functions must have a comment block above them that goes into detail about what the function does and how to use it.  Comments are illegal inside inner functions, except comment blocks that describe variables.
-
-```JavaScript
-/**
- * J Game Engine.
- * @version 1.0.0
- * @namespace
- * @global
- */
- var J = {};
-```
-
-```JavaScript
-(function () {
-    'use strict';
-   
-   /**
-    * A Person is the base class for all people defined in the application.
-    * @class
-    */
-    function Person() {
-        /**
-         * The person's full name.
-         * @type {string}
-         * @default
-         */
-        this._name = null;
-        /**
-         * The person's age (years).
-         * @type {number}
-         * @default
-         */
-        this._age = 0;
-    };
-    
-    /**
-     * Gets the person's name.
-     * @return {string}
-     */
-     Person.prototype.getName = function () {
-         return this._name;
-     };
-     
-     /**
-      * Sets the person's name.
-      * @param {string} name
-      * @return {Person}
-      */
-     Person.prototype.setName = function (name) {
-         this._name = name;
-         return this;
-     };
-}());
-```
-
 ### Indents
 Indents are 4 space characters.
 
