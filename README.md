@@ -1,9 +1,10 @@
 # JavaScript Programming Guide
 v1.0.0
 
-*A guide for creating consistent and pretty JavaScript programs.*
+## About 
+This programming guide is a way for me to create consistent and pretty JavaScript programs.
 
-### General File Format
+## General File Format
 Each file (besides a file with just a global variable) must be wrapped with a self-executing anonymous function.  The first line in the function must be 'use strict';.  Only one 'use strict'; statement must exist in a single file.  Note: this does not apply to Node JS files.
 
 ```JavaScript
@@ -20,10 +21,10 @@ For your project global, it can simply be defined at the global level outside of
 var MyProjectGlobal = {};
 ```
 
-### Indents
+## Indents
 Indents are 4 space characters.
 
-### Tokens
+## Tokens
 User-defined tokens must be in camel case form.  Namespaces and function constructors must start with an uppercase letter.  Constants are all upper case, with underscores separating words.  All other tokens must start with a lowercase letter.
 
 ```JavaScript
@@ -59,7 +60,7 @@ function doSomething () {
 }
 ```
 
-### Acronyms
+## Acronyms
 Acronyms must have lowercase letters starting at the second character.
 
 ```JavaScript
@@ -70,10 +71,10 @@ var myHttpUrl = 'http://www.example.com';
 var httpUrl = 'http://www.example.com';
 ```
 
-### Globals
+## Globals
 Each JavaScript project may create at most one global variable.
 
-### Whitespace
+## Whitespace
 Code inside parens is tight.  Comma-separated items have a single space after each comma.
 
 ```JavaScript
@@ -113,7 +114,7 @@ var result = callFunctionWithWordyParams(
 );
 ```
 
-### Brackets
+## Brackets
 Starting brackets don't have their own line.  Curly braces must never be omitted from control structures with a single statement.
 
 ```JavaScript
@@ -143,7 +144,7 @@ if (x)
     console.log('x is truthy');
 ```
 
-### Quotes
+## Quotes
 Single quotes must be used for strings instead of double quotes.
 
 ```JavaScript
@@ -158,7 +159,7 @@ var s2 = 'My name is Bob O\'Ryan';
 var html = '<div id="page1">Page1 goes here</div>';
 ```
 
-### Variable Declarations
+## Variable Declarations
 All variables must be declared with a single var statement at the top of functions in alphabetical order.  Variables at position 2 and greater must indented 4 spaces after the var keyword on subsequent lines.
 
 ```JavaScript
@@ -171,7 +172,7 @@ function doSomething() {
 }
 ```
 
-### Switch Statements
+## Switch Statements
 The 'case' keyword lines up vertically with the 'switch' keyword.  The code inside a case statement and the 'break' keyword line up vertically.
 
 ```JavaScript
@@ -190,10 +191,10 @@ default:
 }
 ```
 
-### Strict Equality
+## Strict Equality
 Always use the strict equality operators (===, !==) instead of the equality operators (==, !=).
 
-### Ternary Operator
+## Ternary Operator
 Use the ternary operator only to return values, not for performing operations.  Parens must wrap the ternary expression for clarity.
 
 ```JavaScript
@@ -205,7 +206,7 @@ var lastName = (firstName === 'Bob' ? 'Smith' : 'Doe');
 (firstName === 'Bob' ? fullName.setLastName('Smith') : fullName.setLastName('Doe'));
 ```
 
-### Multi-line Statements
+## Multi-line Statements
 Never put more than one statement on a single line.
 
 ```JavaScript
@@ -216,7 +217,7 @@ this.doSomething(); this.process();
 var x = 5; var y = 7;
 ```
 
-### Space Savers
+## Space Savers
 Don't sacrifice clarity to save space.
 
 ```JavaScript
@@ -224,7 +225,7 @@ Don't sacrifice clarity to save space.
 this.getX = function () { return this._x; };
 ```
 
-### Function Bodies
+## Function Bodies
 There must be no newlines in an innermost function body.  Newlines are required to separate variables and functions in an outer scope.
 
 ```JavaScript
@@ -274,7 +275,7 @@ There must be no newlines in an innermost function body.  Newlines are required 
 }());
 ```
 
-### Function Arguments
+## Function Arguments
 Functions may only take a maximum of 3 arguments.
 
 ```JavaScript
@@ -283,7 +284,7 @@ function sum(a, b, c) {
 }
 ```
 
-### Class Syntax
+## Class Syntax
 JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed unless the class has data properties only.  Private variables and functions must be prefixed with an underscore.  Child classes may access private variables and functions of their ancestors.  There is no special protected prefix.
 
 ```JavaScript
@@ -313,10 +314,10 @@ Person.prototype._storeNameInDatabase = function () {
 };
 ```
 
-### Class Constructor Side Effects
+## Class Constructor Side Effects
 Constructors must not cause side effects such as running Ajax requests, communicating with a Database, appending elements to the DOM, and the like.  Constructors are meant for initializing class properties only.
 
-### Class Function Layout
+## Class Function Layout
 Public functions must be at the top of the class, with private functions at the bottom.  Getters and setters are organized in pairs with the get function first followed by the set function.
 
 ```JavaScript
@@ -351,7 +352,7 @@ Person.prototype._specialFunction = function () {
 };
 ```
 
-### Fluent Interfaces
+## Fluent Interfaces
 All setter functions must return 'this'.  Other functions that don't normally have a return value can optionally return 'this', when it makes most sense.
 
 ```JavaScript
@@ -374,7 +375,7 @@ var p = new Person()
     .setName('Bob Smith');
 ```
 
-### Classless Objects as Arguments
+## Classless Objects as Arguments
 Try to avoid passing in arbitrary objects as function arguments.
 
 Avoid this:
@@ -426,7 +427,7 @@ var ajaxSetup = new AjaxSetup()
     .setUrl('/ajax.php');
 doAjax(ajaxSetup);
 ```
-### Callbacks
+## Callbacks
 Callbacks have two arguments, an instance of an Error object, and a data result.  The Error object can be an Error itself or any child class of Error.  If there is no error, it must be set to null.  The result argument can be any data type.  Make sure to bind to 'this' when passing the callback from the context of a class.
 
 ```JavaScript
