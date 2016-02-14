@@ -285,18 +285,9 @@ function sum(a, b, c) {
 ```
 
 ## Class Syntax
-JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed unless the class has data properties only.  Private variables and functions must be prefixed with an underscore.  Child classes may access private variables and functions of their ancestors.  There is no special protected prefix.
+JavaScript classes must have a function constructor that sets their variables to default values.  Public variables are not allowed.  Private variables and functions must be prefixed with an underscore.  Child classes may access private variables and functions of their ancestors.  There is no special protected prefix.
 
 ```JavaScript
-// The Circle class is a data-only class.
-// There are no functions to manipulate the data, so the class variables don't start with an underscore.
-function Circle () {
-    this.centerX = 0;
-    this.centerY = 0;
-    this.radius = 0;
-}
-
-// The Person class has functions that act on the data, so no public variables are allowed.
 // All the variables must be prefixed with an underscore.
 function Person () {
     this._name = null;
@@ -305,12 +296,7 @@ function Person () {
 
 Person.prototype.setName = function (name) {
     this._name = name;
-    this._storeNameInDatabase();
     return this;
-};
-
-Person.prototype._storeNameInDatabase = function () {
-    // Database code here
 };
 ```
 
