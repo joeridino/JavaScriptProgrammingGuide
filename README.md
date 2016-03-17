@@ -414,7 +414,7 @@ var ajaxSetup = new AjaxSetup()
 doAjax(ajaxSetup);
 ```
 ## Callbacks
-Callbacks have two arguments, an instance of an Error object, and a data result.  The Error object can be an Error itself or any child class of Error.  If there is no error, it must be set to null.  The result argument can be any data type.  Make sure to bind to 'this' when passing the callback from the context of a class.
+Callbacks have two arguments, an instance of an Error object, and a data result.  The Error object can be an Error itself or any child class of Error.  If there is no error, it must be set to null.  The result argument can be any data type.  Make sure to bind to 'this' when passing the callback from the context of a class.  Also note that class callback functions are private -- this is more of an indication that outside code shouldn't be calling it directly.
 
 ```JavaScript
 // Simple callback function
@@ -425,10 +425,10 @@ function myCallback(err, result) {
 function Person() {
 }
 
-Person.prototype.myTimeoutCallback = function (err, result) {
+Person.prototype._myTimeoutCallback = function (err, result) {
 };
 
 Person.prototype.doSomething = function () {
-    setTimeout(this.myTimeoutCallback.bind(this), 2000);
+    setTimeout(this._myTimeoutCallback.bind(this), 2000);
 };
 ```
