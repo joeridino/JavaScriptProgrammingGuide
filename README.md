@@ -289,7 +289,7 @@ JavaScript classes must have a function constructor that sets their variables to
 
 ```JavaScript
 // All the variables must be prefixed with an underscore.
-function Person () {
+function Person() {
     this._name = null;
     this._age = null;
 }
